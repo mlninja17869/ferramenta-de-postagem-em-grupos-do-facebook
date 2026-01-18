@@ -1,0 +1,50 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mlninja17869.ferramenta-de-postagem-em-grupos-do-facebook">
+
+    <!-- Permissões necessárias para o funcionamento do aplicativo -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permissão para acessar a internet, essencial para operar em plataformas como Facebook, Instagram e TikTok -->
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Permissão para gravar dados no armazenamento externo, necessário para salvar logs ou dados do aplicativo -->
+    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Permissão para ler dados do armazenamento externo, utilizado para acessar arquivos salvos pelo usuário -->
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="ferramenta de postagem em grupos do Facebook - Android Automation Tool"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Atividade principal do aplicativo -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- O MainActivity é a interface gráfica principal do usuário, onde as funcionalidades são acessadas -->
+
+        <!-- Serviço para automação -->
+        <service
+            android:name=".AutomationService"
+            android:exported="false">
+            <!-- O AutomationService é responsável por executar tarefas automatizadas em segundo plano, garantindo a operação 24 horas -->
+        </service>
+        
+    </application>
+
+    <!-- Comentário adicional: MadHub é uma ferramenta de automação profissional para redes sociais, com suporte a múltiplas plataformas. 
+         É ideal para ser instalada em dispositivos Android, pois funciona em smartphones reais, nuvens e simuladores, garantindo operações contínuas e eficientes sem a necessidade de codificação. -->
+
+</manifest>
+``` 
+
+Este arquivo `AndroidManifest.xml` está configurado para o aplicativo "ferramenta de postagem em grupos do Facebook - Android Automation Tool" e atende aos requisitos e funcionalidades mencionados.
