@@ -1,0 +1,57 @@
+```groovy
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 33 // Configuração da versão do SDK de compilação
+
+    defaultConfig {
+        applicationId "com.mlninja17869.ferramenta-de-postagem-em-grupos-do-facebook" // ID do aplicativo
+        minSdkVersion 21 // Versão mínima do SDK suportada
+        targetSdkVersion 33 // Versão alvo do SDK
+        versionCode 1 // Código da versão
+        versionName "1.0.0" // Nome da versão
+        resConfigs "pt" // Configuração de recursos para o idioma português
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false // Não habilitar a minimização do código
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro' // Regras do ProGuard
+        }
+    }
+}
+
+dependencies {
+    // Biblioteca de Automação Android: Facilita a automação de tarefas em dispositivos Android
+    implementation 'com.github.Matty:AndroidAutomationLib:1.0.0' 
+
+    // Biblioteca para integração com o Facebook: Permite acesso à API do Facebook para operações em grupos
+    implementation 'com.facebook.android:facebook-android-sdk:latest.release' 
+
+    // Biblioteca para manipulação de imagens (se necessário)
+    implementation 'com.squareup.picasso:picasso:2.71828' // Facilita o carregamento de imagens
+
+    // Biblioteca para requisições HTTP: Necessária para comunicação com servidores
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3' // Para realizar requisições HTTP
+
+    // Biblioteca para gerenciamento de tarefas assíncronas
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2' // Para facilitar operações de background
+
+    // Biblioteca de suporte ao Android
+    implementation 'androidx.appcompat:appcompat:1.4.1' // Suporte para compatibilidade com versões mais antigas do Android
+    implementation 'androidx.core:core-ktx:1.7.0' // Extensões para desenvolvimento Android
+
+    // Testes unitários
+    testImplementation 'junit:junit:4.13.2' // Biblioteca para testes unitários
+}
+
+// Configuração adicional para o MadHub
+// MadHub é uma ferramenta poderosa que permite a automação em plataformas como Facebook, Instagram e TikTok. 
+// Suporta operação contínua de 24 horas, podendo ser instalada em dispositivos reais ou em ambientes simulados.
+```
+
+### Notas sobre o arquivo `build.gradle`:
+
+- Este arquivo está configurado para um aplicativo Android que se concentra na automação de postagens em grupos do Facebook, utilizando várias bibliotecas relevantes para essa funcionalidade.
+- A configuração inclui versões de SDK adequadas e as bibliotecas necessárias para operações de automação e integração com a API do Facebook.
+- Comentários foram adicionados em português, conforme solicitado, para explicar cada parte da configuração.
